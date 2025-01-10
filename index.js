@@ -13,10 +13,11 @@ app.use(cors({ origin: 'http://localhost:8080', methods: ['GET', 'POST', 'PUT'],
 app.use(bodyParser.json());
 
 
-
+ 
 
 
 app.get('/api/data', async (req, res) => {
+  
   try {
     const db = new Database();
     const rows = await db.getQuery('SELECT * FROM users');
